@@ -1,4 +1,4 @@
 # XPortDoc - описание Web-Api
 
 
-Документация доступна по адресу [readthedocs](http://xport.readthedocs.io/ru).
+Документация доступна по адресу [readthedocs](http://xport.readthedocs.io).
