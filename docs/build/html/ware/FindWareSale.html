@@ -1,0 +1,287 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Ware/SearchByNum &mdash; Документация XportDoc 0.0.1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Алфавитный указатель"
+              href="../genindex.html"/>
+        <link rel="search" title="Поиск" href="../search.html"/>
+    <link rel="top" title="Документация XportDoc 0.0.1" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> XportDoc
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../car/FuelType.html">Car/FuelType</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../car/MarkaFilter.html">Car/MarkaFilter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../car/ModelsFilter.html">Car/ModelsFilter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../car/SimpleQueryVIN.html">Car/SimpleQueryVIN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../car/TransmissionType.html">Car/TransmissionType</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">XportDoc</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Ware/SearchByNum</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ware/FindWareSale.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ware-searchbynum">
+<h1>Ware/SearchByNum<a class="headerlink" href="#ware-searchbynum" title="Ссылка на этот заголовок">¶</a></h1>
+<p><strong>Описание:</strong> Метод получает список товаров по поисковому значению</p>
+<p><strong>Процедура:</strong> R4_TMC..psx_Ware_SearchByNum</p>
+<div class="section" id="id1">
+<h2>Запрос:<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">POST</span> <span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">Car</span><span class="o">/</span><span class="n">SimpleQueryVIN</span> <span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span>
+<span class="n">Host</span><span class="p">:</span> <span class="n">testxport</span><span class="o">.</span><span class="n">exist</span><span class="o">.</span><span class="n">ua</span><span class="p">:</span><span class="mi">14088</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Authorization</span><span class="p">:</span> <span class="n">Basic</span> <span class="p">{{</span><span class="n">логин</span><span class="o">/</span><span class="n">пароль</span> <span class="n">в</span> <span class="n">base64</span><span class="p">}}</span>
+<span class="p">{</span>
+<span class="s2">&quot;msg&quot;</span><span class="p">:</span> <span class="s2">&quot;пример&quot;</span><span class="p">,</span>
+<span class="s2">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+    <span class="s2">&quot;VinCode&quot;</span><span class="p">:</span> <span class="s2">&quot;testVIN&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;MarkaID&quot;</span><span class="p">:</span> <span class="s2">&quot;207&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ModelID&quot;</span><span class="p">:</span> <span class="s2">&quot;1178&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Size&quot;</span><span class="p">:</span> <span class="s2">&quot;1,4 16V&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;YearRelease&quot;</span><span class="p">:</span> <span class="s2">&quot;2002&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;FuelTypeID&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;TransmissionTypeID&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Email&quot;</span><span class="p">:</span> <span class="s2">&quot;test@test.mail&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;SendEmail&quot;</span><span class="p">:</span> <span class="s2">&quot;on&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Wares&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;Item&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Ware 1&quot;</span><span class="p">,</span><span class="s2">&quot;Ware 2&quot;</span><span class="p">,</span><span class="s2">&quot;Ware 3&quot;</span><span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;SessionID&quot;</span><span class="p">:</span> <span class="mi">10816197</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>Ответ:<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span>
+<span class="s2">&quot;code&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="s2">&quot;msg&quot;</span><span class="p">:</span> <span class="s2">&quot;Выборка по номеру&quot;</span><span class="p">,</span>
+<span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+    <span class="s2">&quot;TypeRecord&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s2">&quot;WareId&quot;</span><span class="p">:</span> <span class="mi">11303727</span><span class="p">,</span>
+    <span class="s2">&quot;WareNum&quot;</span><span class="p">:</span> <span class="s2">&quot;LF3376&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;WareName&quot;</span><span class="p">:</span> <span class="s2">&quot;Масляный фильтр&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;TradeMarkID&quot;</span><span class="p">:</span> <span class="mi">2908</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+    <span class="s2">&quot;TypeRecord&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="s2">&quot;WareId&quot;</span><span class="p">:</span> <span class="mi">11657672</span><span class="p">,</span>
+    <span class="s2">&quot;WareNum&quot;</span><span class="p">:</span> <span class="s2">&quot;WL7135&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;WareName&quot;</span><span class="p">:</span> <span class="s2">&quot;Масляный фильтр&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;TradeMarkID&quot;</span><span class="p">:</span> <span class="mi">4331</span><span class="p">,</span>
+    <span class="s2">&quot;TradeMarkName&quot;</span><span class="p">:</span> <span class="s2">&quot;WIX&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, viktortat.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

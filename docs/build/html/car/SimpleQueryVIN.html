@@ -1,0 +1,278 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Car/SimpleQueryVIN &mdash; Документация XportDoc 0.0.1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Алфавитный указатель"
+              href="../genindex.html"/>
+        <link rel="search" title="Поиск" href="../search.html"/>
+    <link rel="top" title="Документация XportDoc 0.0.1" href="../index.html"/>
+        <link rel="next" title="Car/TransmissionType" href="TransmissionType.html"/>
+        <link rel="prev" title="Car/ModelsFilter" href="ModelsFilter.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> XportDoc
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="FuelType.html">Car/FuelType</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MarkaFilter.html">Car/MarkaFilter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ModelsFilter.html">Car/ModelsFilter</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Car/SimpleQueryVIN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Запрос:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Ответ:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="TransmissionType.html">Car/TransmissionType</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">XportDoc</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Car/SimpleQueryVIN</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/car/SimpleQueryVIN.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="car-simplequeryvin">
+<h1>Car/SimpleQueryVIN<a class="headerlink" href="#car-simplequeryvin" title="Ссылка на этот заголовок">¶</a></h1>
+<p><strong>Описание:</strong> Запись по запросу VIN</p>
+<p><strong>Процедура:</strong> R4_Order..psx_SimpleQueryVIN_Create</p>
+<div class="section" id="id1">
+<h2>Запрос:<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">POST</span> <span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">Car</span><span class="o">/</span><span class="n">SimpleQueryVIN</span> <span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span>
+<span class="n">Host</span><span class="p">:</span> <span class="n">testxport</span><span class="o">.</span><span class="n">exist</span><span class="o">.</span><span class="n">ua</span><span class="p">:</span><span class="mi">14088</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+<span class="n">Authorization</span><span class="p">:</span> <span class="n">Basic</span> <span class="p">{{</span><span class="n">логин</span><span class="o">/</span><span class="n">пароль</span> <span class="n">в</span> <span class="n">base64</span><span class="p">}}</span>
+<span class="p">{</span>
+<span class="s2">&quot;msg&quot;</span><span class="p">:</span> <span class="s2">&quot;пример&quot;</span><span class="p">,</span>
+<span class="s2">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+    <span class="s2">&quot;VinCode&quot;</span><span class="p">:</span> <span class="s2">&quot;testVIN&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;MarkaID&quot;</span><span class="p">:</span> <span class="s2">&quot;207&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ModelID&quot;</span><span class="p">:</span> <span class="s2">&quot;1178&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Size&quot;</span><span class="p">:</span> <span class="s2">&quot;1,4 16V&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;YearRelease&quot;</span><span class="p">:</span> <span class="s2">&quot;2002&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;FuelTypeID&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;TransmissionTypeID&quot;</span><span class="p">:</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Email&quot;</span><span class="p">:</span> <span class="s2">&quot;test@test.mail&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;SendEmail&quot;</span><span class="p">:</span> <span class="s2">&quot;on&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Wares&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;Item&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Ware 1&quot;</span><span class="p">,</span><span class="s2">&quot;Ware 2&quot;</span><span class="p">,</span><span class="s2">&quot;Ware 3&quot;</span><span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;SessionID&quot;</span><span class="p">:</span> <span class="mi">10816197</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>Ответ:<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="TransmissionType.html" class="btn btn-neutral float-right" title="Car/TransmissionType" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ModelsFilter.html" class="btn btn-neutral" title="Car/ModelsFilter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, viktortat.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
